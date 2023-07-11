@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<link rel="stylesheet" href="css/estilos.css">
+    <title>formula</title>
+</head>
+
+<body>
+    <div class="container  ">
+        <h1 class="text-center">Punto de Equilibrio</h1>
+
+        <label>Costo Fijo: <br></label><input type="text" id="valor1"><br>
+        <label>Precio de Venta: <br></label><input type="text" id="valor2"><br>
+        <label>Costo Variable: <br></label><input type="text" id="valor3"><br>
+        <label>Resultado: <br></label><input type="text" id="result"><br>
+        <input type="button" name="calculo" value="calcular" onclick="calculo()">
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+        crossorigin="anonymous"></script>
+</body>
+<script type="text/javascript">
+    function calculo() {
+        var valor1 = Number(document.getElementById('valor1').value);
+        var valor2 = Number(document.getElementById('valor2').value);
+        var valor3 = Number(document.getElementById('valor3').value);
+        var result = valor1 / (valor2 - valor3);
+        document.getElementById('result').value = result;
+    }
+</script>
+</html>
